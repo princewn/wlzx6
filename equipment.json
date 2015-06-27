@@ -1,0 +1,14 @@
+{
+  "first":{ 
+			"name":"路由器" , 
+			"number":"5" ,
+			"introduction":"路由器是一个网络层应用",
+			"picture":"./images/1.jpg"
+		},
+  "second":{ 
+			"name":"交换机" , 
+			"number":"3",
+			"introduction":"交换机是一个网络层应用",
+			"picture":"./images/2.jpg"
+		}
+}

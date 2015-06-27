@@ -1,0 +1,28 @@
+@charset "utf-8";
+*{margin:0; padding:0;}
+.hr{
+color:#0099FF; 
+height:2px;
+position: absolute; 
+}
+/*#more{
+position:relative; 
+top:-15px;
+*top:-20px;
+font-size:12px; 
+color:#36F;
+}*/
+#news{
+	background-color:#66C;
+	height:450px;
+	font-size:14px;
+	background-color:#FFF;
+}
+#information
+{
+	width:100%;
+	height:422px; 
+	border: double 2px #0066CC;
+	float:left;
+	border:none !important;
+}

@@ -1,0 +1,488 @@
+*{
+	margin:0;
+	padding:0;
+	border:0;
+	line-height:20px;
+	*line-height:20px;
+	vertical-align:middle;
+    text-decoration:none;
+	overflow:hidden;
+}
+html, body {
+	margin:0 auto ;
+	font-family: "Helvetica Neue","HelveticaNeue",Helvetica,Arial,sans-serif;
+	font-weight: 400;
+	line-height: 1.4;
+	font-size: 14px;
+	font-style: normal;
+	color: #444;
+	text-align:center;
+	overflow:auto;
+	background-size:100% 100%;
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
+    src="./pics/backgroud.jpg",
+    sizingMethod='scale');
+	
+}
+div{
+	width:100%;
+	height:auto;
+}
+a{
+	font-family: "Helvetica Neue","HelveticaNeue",Helvetica,Arial,sans-serif;
+	font-weight: 400;
+	line-height: 1.4;
+	font-size: 14px;
+	font-style: normal;
+	color: #444;
+	text-align:center;
+	overflow:auto;
+}
+td{
+	font-family: "Helvetica Neue","HelveticaNeue",Helvetica,Arial,sans-serif;
+	font-weight: 400;
+	line-height: 1.4;
+	font-size: 14px;
+	font-style: normal;
+	color: #444;
+	text-align:center;
+}
+a:hover,a:link,a:visited,a:active{
+text-decoration:none;
+}
+.ap{
+	font-family: "Helvetica Neue","HelveticaNeue",Helvetica,Arial,sans-serif;
+	font-weight: 400;
+	line-height: 1.4;
+	font-size: 14px;
+	font-style: normal;
+	color:#000;
+	width: 100%;
+	text-overflow: ellipsis;
+	white-space: nowrap;/*禁止自动换行*/
+	overflow: hidden;
+	text-align:left;
+
+}
+article{
+	width:100%;
+	text-align:left;	
+	letter-spacing: 1px; 
+	word-spacing: 2px;
+	text-indent: 2em;
+	line-height:20px;
+	text-align: justify; 
+}
+/*input{
+	font-size:12;
+}*/
+.cssInput{
+	font-size:12;
+    border:1px solid  #0066FF;  
+    border:1px solid #0099FF\9;/*IE*/
+	border-top:none;  
+	border-bottom:none;  
+    width:174px;  
+    height:18px;/*非IE高度*/  
+    height:15px \9;/*IE高度*/  
+    padding-left:5px; /*all*/  
+    line-height:15px \9;/*IE*/  
+    -moz-border-radius:3px;/*Firefox*/  
+    -webkit-border-radius:3px;/*Safari和Chrome*/  
+    border-radius:3px;/*IE9+*/  
+    background-color:white;  
+    outline:none; 
+	z-index:99;
+}  
+.cssInput>*{
+	vertical-align:top;
+}
+
+.cssInputSubmit{
+	font-size:12; 
+    width:30px;  
+    height:18px;/*非IE高度*/  
+    height:17px \9;/*IE高度*/  
+    /*padding-left:5px; all*/  
+    line-height:17px \9;/*IE*/  
+    -moz-border-radius:3px;/*Firefox*/  
+    -webkit-border-radius:3px;/*Safari和Chrome*/  
+    border-radius:3px;/*IE9+*/  
+    background-color:white;  
+    outline:none;
+	background-color:#99CCFF;
+	z-index:99;
+	margin-left:6px;
+} 
+.cssInputSubmit:hover{
+	cursor:pointer;
+	background-color:#66CCFF;
+} 
+.searchImg{
+	width:20px; 
+	height:20px; 
+	position:relative; 
+	left:210px; 
+	left:210px\9; 
+	z-index:99;
+}
+#container{
+	background-color:#FFFFFF;
+}
+#body{
+	width:960px;
+	margin:0 auto;
+}
+#logo{
+	height:132px;
+	-moz-border-radius: 1em;
+	-webkit-border-radius: 1em;
+	border-radius: 1em;
+}
+#logoPic{
+	width:100%;
+	height:132px;
+	position:relative;
+	top:-10px;
+}
+
+<!--导航栏伸缩效果-->
+#project{
+	height:42px;
+	font-variant:normal;
+	font-size:28px；
+	/*position:relative;
+	z-index:100;/*提高优先级后导航栏可以点击了，but why?又没有覆盖
+	果然是被display:none的弹出 前 user框覆盖了。。。
+	IE下display，貌似也是占地方的。。。
+	*/
+}
+#nav{
+	width:960px;/*否则没有圆角效果*/
+	height:40px;
+	background-color:#FFF;
+	-moz-border-radius: 1em;
+	-webkit-border-radius: 1em;
+	border-radius: 1em;
+	z-index:100;
+}
+.vline{
+	background: #999;
+	width: 1px;
+	height: 20px;
+	float:left;
+}
+#nav ul{
+	list-style-type: none;
+	float:left;
+}
+#nav li{
+	float: left;
+	font-family: Arial;
+	font-weight: bold;
+	font-size: 12px;	
+}
+#nav li a{
+	font-size:16px;
+	display: block;
+	width:159px;
+	line-height: 38px;
+	color:  #666;	
+	border-top: 4px solid #0F35A5;
+	}
+#nav li a:hover{
+	font-size:17px;
+	color:  #36F;
+	border-top: 4px solid #7C8DD9;	
+}
+#nav  li ul{
+	width:159px;
+	position:absolute;
+	left:-999px
+    
+	}
+#nav ul li:hover ul{
+	/*父列表悬浮，将下拉菜单位置改为原位置*/
+	left:auto;
+	background-color:#A1CAE2;
+	color:#FFFFFF;
+}	
+#navv{
+	height: 90px;
+	width: 159px;
+	z-index:100;
+	}
+#navv ul{
+	list-style-type:none;
+	float:left;
+}
+#navv li{
+	float: left;
+	font-family: Arial;
+	font-weight: bold;
+	font-size: 12px;
+	text-align: center;
+	background-color:#D0E0ED;
+}
+#navv li a{
+	display: block;
+	width:159px;
+	line-height: 28px;
+	color:#666;	
+    border-top:  2px solid  #0F35A5;
+/*	position:relative;
+	z-index:100;不是这一级的优先级*/
+	}
+#navv li a:hover{
+	color:  #36F;
+	border-top: 3px solid #7C8DD9;	
+}
+#nav ul{padding:0;line-height:0;margin:0; border:0}
+
+/*登录状态栏*/
+.stateA{
+	font-size:16px;
+	font-weight:700;
+	color:#FFFFFF;
+	margin:10 10px;
+	float:right;
+	position:relative;
+	z-index:100;/*若无，被图片覆盖无法点击*/
+}
+.stateA:hover,.stateA:visited{
+color:#FFFFFF;
+}
+.emptyDiv2{
+	width:100%;
+	height:2px;
+	background:#0099FF;
+}
+/*
+#myForm{
+	border-color:#609;
+	width:400px;
+	height:300px;
+}
+*/
+#flinks{	
+	height:25px;
+	background-color:#0066FF;
+	color:#FFFFFF;
+	position:relative;
+/*	overflow:auto;*/
+}	
+#flinks a{	
+    display:inline;
+	color:#FFFFFF;
+	float:right;
+	font-size:12px;
+	line-height:25px;
+	vertical-align:middle;
+}
+
+
+/*信息发布位置以及搜索框
+*/
+.title{
+	font-size:16px;
+	font-weight:700;
+	text-align:left;
+	float:none;
+	padding-left:10px;
+	padding-top:3px;
+	color:#36F;
+}
+.titleLineHeight35{
+	font-size:16px;
+	font-weight:700;
+	text-align:left;
+	float:none;
+	padding-left:10px;
+	padding-top:3px;
+	color:#36F;
+	line-height:35px;
+}
+.smallTitle{
+	font-size:15px;
+	font-weight:700; 
+	display:block;
+	padding:8px 0;
+	text-align:left;
+	color:#36F;
+}
+.functionClick{
+	float:right; 
+	font-size:12px; 
+	color:#36F;
+	padding-top:2px;
+	padding-right:10px;
+}
+.searchText{
+	border:thick;
+
+}
+/*底部*/
+#end{
+	height:80px;
+}
+.left{
+	display:inline-block;
+	float:left;
+}
+.right{
+	display:inline-block;
+	float:right;
+	font-family: "Helvetica Neue","HelveticaNeue",Helvetica,Arial,sans-serif;
+	font-weight: 400;
+	font-size: 12px;
+	font-style: normal;
+	color: #FFF;
+	text-align:center;
+	overflow:auto;
+}
+.center{
+	float:none;
+	text-align:center;
+	display:block;
+}
+.lineHeight25{
+	display:inline-block;
+	line-height:25px;
+}
+/*#99FFCC*/
+.order{
+	font-size:12px;
+	font-weight:200;
+}
+.leftPadding20{
+	padding-left:10px;
+}
+.height40{
+	height:13px;
+}
+#containerAuto{
+	background-color:#FFFFFF;
+	height:420px;/*设个长度要不end等下面的div到处乱跑*/
+	overflow:auto;/*这里有个margin，会比设定的高度高5*/
+}
+#quotes{
+	width:600px;
+	height:50px;
+	max-width:665px;
+	border: double 2px #0066CC;
+}
+#detail{
+	width:600px;
+	height:250px;
+	max-width:665px;
+	border: double 2px #0066CC;
+}
+#source{
+	width:400px;
+	height:30px;
+	max-width:665px;
+	border: double 2px #0066CC;
+}
+#submitInput{
+	width:60px;
+	height:30px;
+	border: double 2px #0066CC;
+}
+.clearAfter:after {
+    content: "."; 
+    display: block;
+    height: 0; 
+    clear: both; 
+    visibility: hidden;
+} /*不好使的呢*/
+.verticle{
+	vertical-align:middle;
+}
+
+table{
+	border:#F09 0px solid;
+	border-collapse:separate;
+	line-height:30px;
+}
+#InformationTable{
+    width:100%;/*否则表格有默认宽度*/
+	margin:0 aito;
+}
+#InformationTable th{
+	font-size:14px;
+    font-weight:700;
+	color:#666666;
+	margin:5px 0;
+	text-align:center;
+	
+	text-overflow:ellipsis; 
+	white-space:nowrap; 
+	*white-space:nowrap; 
+	overflow:hidden; 	
+}
+#InformationTable td a{
+	font-family: "Helvetica Neue","HelveticaNeue",Helvetica,Arial,sans-serif;
+	font-weight: 400;
+	line-height: 1.4;
+	font-size: 14px;
+	font-style: normal;
+	color: #444;
+	text-align:left !important;
+	overflow:auto;
+	
+	text-overflow:ellipsis; 
+	white-space:nowrap; 
+	*white-space:nowrap; 
+	overflow:hidden;
+	text-align:left !important;	
+}
+.overflowellipsis{
+	text-overflow:ellipsis; 
+	white-space:nowrap; 
+	*white-space:nowrap; 
+	overflow:hidden;
+	text-align:left !important;
+}
+.padding20{
+	float:left;
+	padding-left:20px; 
+	display:inline-block; 
+	text-align:left;'
+}
+.tableTitle{
+	height:35px;
+}
+.order{
+font-size:12px;
+}
+.InformationTableTh{
+	font-size: 14px;
+	font-weight: 700;
+	color: #666666;
+	margin: 5px 0;
+	text-align: center;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+.InformationTableTd{
+	font-family: "Helvetica Neue","HelveticaNeue",Helvetica,Arial,sans-serif;
+	font-weight: 400;
+	line-height: 1.4;
+	font-size: 14px;
+	font-style: normal;
+	color: #444;
+	text-align: left !important;
+	overflow: auto;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+	text-align: left !important;
+}
+.navFocus{
+	background-color:#D0E0ED;
+/*	color:#D0E0ED !important;*/
+}
+.zxx_text_overflow{width:47em; height:1.3em; overflow:hidden; zoom:1;}
+.zxx_text_overflow .text_con{float:left; height:1.3em; margin-right:3em; overflow:hidden;}
+.zxx_text_overflow .text_dotted{width:3em; height:1.31em; float:right; margin-top:-1.3em;}

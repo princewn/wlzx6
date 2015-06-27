@@ -1,0 +1,89 @@
+@charset "utf-8";
+#container{
+	background-color:#FFFFFF;
+	height:450px;/*设个长度要不end等下面的div到处乱跑*/
+	overflow:hidden;/*这里有个margin，会比设定的高度高5*/
+}
+aside{
+	width:100%;
+	float:right;
+	height:100%;
+	display:inline-block;
+}
+/*	IE不识别，空的div，只对可以识别布局
+*/
+#aside{
+	width:38.197097%;
+	float:right;
+	height:100%;
+	display:inline-block;
+	padding-top:5px;
+	padding-top:0px\9;
+}
+#flow {
+	height:37.5%;
+	color: #fff;
+}
+#myMarquee{
+	display:inline-block;
+	width:96%;
+	height:80%;
+	color:#003399;
+	border: double 2px #0066CC;
+	margin-right:10px;
+	margin-top:2px;
+	text-align:center;
+}
+#note
+{
+	height:62.5%;
+    color:#309;
+	/*float:left;此处若不设为浮动从而与aside在一个流中，则字体从错的位置开始动*/
+}
+#leaveNote{
+	background-color:#FFFFFF;
+	overflow:auto;
+}
+#news{
+	width:61.802903%;
+	height:100%;
+	float:left;
+	padding-top:5px;
+	padding-top:0px\9;
+}
+#information
+{
+    width:96%; 
+	height:88%;
+	/*float:left;老师盖住上面飞float的信息展示搜索*/
+	border: double 2px #0066CC;
+	margin:0 auto;
+	overflow:hidden;
+
+}
+#leaveNote{
+width:96%;
+/*display:inline-block;textarea行内元素无法设定高度?  name="name",cols=40,rows=8? 不能百分比？*/
+height:230px;
+height:227px\9;
+border: double 2px #0066CC;
+margin-right:10px;
+resize: none;
+
+}
+
+
+/*
+http://reeoo.com/  炫酷图片
+找图的方法，在network里面找到资源网址，打开点击后，选择图片另存为
+http://www.bootcss.com/
+Bootstrap相关优质项目推荐
+这些项目或者是对Bootstrap进行了有益的补充，或者是基于Bootstrap开发的
+实用插件
+http://www.bootcss.com/p/websafecolors/
+WEB安全色
+http://foundation.zurb.com/
+响应式框架
+http://www.bootcss.com/p/simple-icons/
+实用好看icon
+*/

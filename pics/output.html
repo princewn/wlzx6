@@ -1,0 +1,243 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+</head>
+
+<body>
+<div id="first" style="width:100%;height:50px; background-color:#FFCC99">
+<script>
+var flag=true;
+var flag2=true;
+	if(flag==true)
+	{
+	  var i=0; 
+	  
+	  j=1; 
+	  
+	  if(flag2==true)
+	  {     
+		for(  var m=0;m<10;m++)
+		{
+		 
+		 }
+	  }
+	}
+//jubu();
+document.write(i);
+document.write(j);
+document.write(m);
+</script>
+</div>
+<div id="second" style="width:100%;height:50px; background-color:#FF6666" >
+<script>
+var x = 1; 
+
+ function ScopeTest(){
+    document.write( x );   
+    var x = 'hello world';
+    document.write( x );    
+ }
+ 
+ ScopeTest();
+</script>
+</div>
+<div id="third" style="width:100%;height:50px; background-color:#FFCC99">
+<script>
+var name = 'laruence';     
+function echo()
+ {         
+   document.write(name);   
+ }      
+function env()
+ {
+    var name = 'eve';         
+    echo();   
+}      
+
+env();
+</script>
+</div>
+<div id="fourth" style="width:100%;height:50px; background-color:#FF6666" >
+<script>
+function test(xxx){
+  document.write(xxx);
+  var xxx = 123; 
+  function xxx(){  
+     document.write('hello');
+  }
+  document.write(xxx); 
+}
+test(444);
+</script>
+</div>
+<div id="fifth" style="width:100%;height:50px; background-color:#FFCC99" >
+<script>
+         function JSClass() {
+            this.m_Text = 'division element';
+            this.m_Element = document.createElement('DIV');
+            this.m_Element.innerHTML = this.m_Text;
+/*			attachEvent与addEventListener区别
+			适应的浏览器版本不同，同时在使用的过程中要注意
+			attachEvent方法          按钮onclick
+			addEventListener方法    按钮click
+*/
+
+/*
+if (el.addEventListener){   
+el.addEventListener(‘click’, KindDisableMenu, false);   
+} else if (el.attachEvent){   
+el.attachEvent(‘onclick’, KindDisableMenu);   
+}
+*/
+
+			
+			var isIE=!!window.ActiveXObject; 
+            if (isIE)
+            this.m_Element.attachEvent('onclick', this.ToString);
+			else
+			this.m_Element.addEventListener('click', this.ToString);	
+			//this.event.srcElement.addEventListener('click', this.ToString);		
+        }
+
+        JSClass.prototype.Render = function() {
+            document.body.appendChild(this.m_Element);
+        }
+
+        JSClass.prototype.ToString = function() {
+            alert(this.m_Text);
+        };
+
+        var jc = new JSClass();
+        jc.Render();//添加渲染div元素
+        jc.ToString(); //输出 division element
+
+        //click添加的div元素division element会输出underfined，为什么？
+        //这时的EventHandler()方法中的this关键字，指示的对象是IE的window对象。
+        //这是因为EventHandler只是一个普通的函数，对于attachEvent后，
+        //脚本引擎对它的调用和div对象本身没有任何的关系。同时你可以再看看EventHandler的caller属性，
+        //它是等于null的。如果我们要在这个方法中获得div对象引用，应该使用：this.event.srcElement。 
+		
+		
+		
+		
+</script>
+</div>
+<div id="sixth" style="width:100%;height:50px; background-color:#FF6666" >
+<script>
+var isIE=!!window.ActiveXObject; 
+var isIE6=isIE&&!window.XMLHttpRequest; 
+var isIE8=isIE&&!!document.documentMode; 
+var isIE7=isIE&&!isIE6&&!isIE8; 
+if (isIE){ 
+	if (isIE6){ 
+	alert("ie6"); 
+	}else if (isIE8){ 
+	alert("ie8"); 
+	}else if (isIE7){ 
+	alert("ie7"); 
+	} 
+} 
+else{
+    document.write("not IE");
+}
+ 
+ 
+ 
+if(navigator.userAgent.indexOf("Opera") != -1) { 
+alert('Opera'); 
+} 
+else if(navigator.userAgent.indexOf("MSIE") != -1) { 
+alert('Internet Explorer'); 
+} 
+else if(navigator.userAgent.indexOf("Firefox") != -1) { 
+alert('Firefox'); 
+} 
+else if(navigator.userAgent.indexOf("Netscape") != -1) { 
+alert('Netscape'); 
+} 
+else if(navigator.userAgent.indexOf("Safari") != -1) { 
+document.write('is Safari'); 
+} 
+//明明是谷歌报Safari
+else{ 
+alert('无法识别的浏览器。'); 
+} 
+
+</script>
+</div>
+<div id="seventh" style="width:100%;height:50px; background-color:#FFCC99" >
+<p id="myBtn">this$src</p>
+<script>
+var btn = document.getElementById("myBtn");
+/*btn.onclick = function () {
+    alert(window.event.srcElement === this); //ture
+};*/
+btn.addEventListener("onclick", function (event) {
+     var element=evt.srcElement || evt.target;
+
+    alert(element === this); //false
+})
+</script>
+</div>
+<div id="eighth" style="width:100%;height:50px; background-color:#FF6666" >
+<script>
+           var obj = {
+            i: "test",
+            m: function() {
+                document.write(this.i); //指向obj对象 实例,输出值test 
+                function B() {
+                    document.write(this.i); //输出值undefined
+                    //调用B的实例是m，不是obj，所以this就是m
+                    //m里面没有i，所以默认会加上一句var i；当然是underfined。
+                }
+                B(); 
+            }
+        }
+        obj.m(); 
+</script>
+</div>
+<div id="nineh" style="width:100%;height:50px; background-color:#FFCC99" >
+<script>
+ var obj = {  
+       i : "test",  
+       m : function(){  
+          document.write(this.i);//指向obj对象 ,值test  
+          function B(){  
+             var i = 1;  
+             document.write(this.i);//指向window对象,值undefined  
+          }  
+          B();//B并不是window的方法，this为什么也指向window？？？？？？  
+      }  
+   }  
+   obj.m();
+</script>
+</div>
+<div id="nineh" style="width:100%;height:50px; background-color:#FF6666" >
+<script>
+alert("现在要换行了"+"are you ready</br>"+"you see");
+</script>
+</div>
+<div id="nineh" style="width:100%;height:50px; background-color:#FFCC99" >
+<script>
+
+</script>
+</div>
+<div id="nineh" style="width:100%;height:50px; background-color:#FF6666" >
+<script>
+
+</script>
+</div>
+<div id="nineh" style="width:100%;height:50px; background-color:#FFCC99" >
+<script>
+
+</script>
+</div>
+<div id="nineh" style="width:100%;height:50px; background-color:#FF6666" >
+<script>
+
+</script>
+</div>
+</body>
+</html>

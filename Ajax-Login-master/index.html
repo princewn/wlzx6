@@ -1,0 +1,169 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+
+<!--Stylesheets-->
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+
+<!--Scripts-->
+<script language="javascript" type="text/javascript" src="/Public/jquery-1.11.0.js"></script>
+<script language="javascript" type="text/javascript" src="/Public/jquery-validation-1.13.1/dist/additional-methods.min.js"></script>
+<script language="javascript" type="text/javascript" src="./scripts/data_handling.js"></script>
+<script language="javascript" type="text/javascript" src="./scripts/display_scripts.js"></script>
+<script>
+
+$(document).ready(function() {
+	$(".message").hide();
+	
+	$("#registerWrapper").hide();
+	
+	$("#forgotWrapper").hide();
+
+	$(".username").focus(function() {
+		$(".user-icon").css("left","-48px");
+	});
+	$(".username").blur(function() {
+		$(".user-icon").css("left","0px");
+	});
+	
+	$(".password").focus(function() {
+		$(".pass-icon").css("left","-48px");
+	});
+	$(".password").blur(function() {
+		$(".pass-icon").css("left","0px");
+	});
+	$(".emailAddress").focus(function() {
+		$(".email-icon").css("left","-48px");
+	});
+	$(".emailAddress").blur(function() {
+		$(".email-icon").css("left","0px");
+	});
+});
+</script>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>
+<body>
+
+<!--Message Container-->	
+<div class="message">
+	<div class="messageText"></div>
+	<div class="messageImage"></div>
+</div>
+ 
+ 
+ <!-- Login Container -->
+<div class="wrapper" id="loginWrapper">
+	<!--Sliding icons-->
+	<div class="user-icon"></div>
+	<div class="pass-icon"></div>
+	<!--END Sliding icons-->
+
+	<!--login form inputs-->
+	<div class="login-form">
+		<form id="loginForm" onsubmit='check_login();return false;'>
+
+			<!--Header-->
+			<div class="header">
+				<h1>登录</h1>
+				<span>需要认证</span>
+			</div>
+			 <!--END header-->
+		
+			<!--Input fields-->
+			<div class="content">
+				<input name="username" type="text" class="input username required" id="username" placeholder="用户名" />
+				<input name="password" type="password" id="password" class="input password required" placeholder="密码" />
+			</div>
+			<!--END Input fields-->
+	    
+			<!--Buttons-->
+			<div class="footer">
+				<input id="submit" type="submit" name="Login" value="登录" class="button" id="login"/>
+				<a href="#" id="submit" class="register" onclick="showAndTell('#registerWrapper','#loginWrapper');">注册</a>
+				<a href="#" id="submit" class="register" onclick="showAndTell('#forgotWrapper','#loginWrapper');">忘记密码</a>
+			</div>
+		</form>
+	<!--END Buttons-->
+	</div>
+<!--end login form-->
+</div>
+
+<!-- Registration Container-->
+<div class="wrapper" id="registerWrapper">
+	<!--Sliding icons-->
+	<div class="user-icon"></div>
+	<div class="pass-icon"></div>
+	<div class="email-icon"></div>
+	<!--END Sliding icons-->
+
+	<!--login form inputs-->
+	<div class="login-form">
+		<form id="registerForm"  onsubmit='registerUser();return false;'>
+	
+			<!--Header-->
+			<div class="header">
+				<h1>注册</h1>
+				<span>注册账号操作</span>
+			</div>
+			<!--END header-->
+		
+			<!--Input fields-->
+			<div class="content">
+				<input name="username" type="text" class="input username required" id="registerUsername" placeholder="用户名" />
+				<input name="password" type="password" id="registerPassword" class="input password required" placeholder="密码" />
+				<input style="margin-top:25px;" name="email" type="email" id="registerEmail" class="input emailAddress required" placeholder="Email Address" />
+			</div>
+			<!--END Input fields-->
+	    
+			<!--Buttons-->
+			<div class="footer">
+				<input id="submit" type="submit" name="Login" value="注册" class="button" id="login"/>
+				<a href="#" id="submit" class="register" onclick="showAndTell('#loginWrapper','#registerWrapper');"><--登录</a>
+			</div>
+		</form>
+		<!--END Buttons-->
+		<!--end login form-->
+
+	</div>
+</div>
+
+
+<div class="wrapper" id="forgotWrapper">
+	<!--Sliding icons-->
+	<div class="email-icon" style="margin-top:-143px;"></div>
+	<!--END Sliding icons-->
+
+	<!--login form inputs-->
+	<div class="login-form">
+		<form id="forgot" onsubmit='forgot();return false;'>
+
+			<!--Header-->
+			<div class="header">
+				<h1>忘记密码</h1>
+				<span>输入注册时的邮箱</span>
+			</div>
+			<!--END header-->
+		
+			<!--Input fields-->
+			<div class="content">
+				<input name="email" type="email" id="forgotEmail" class="input emailAddress required" placeholder="邮件" />
+			</div>
+			<!--END Input fields-->
+	    
+			<!--Buttons-->
+			<div class="footer">
+				<input id="submit" type="submit" name="Login" value="发送邮件" class="button" id="login"/>
+				<a href="#" id="submit" class="register" onclick="showAndTell('#loginWrapper','#forgotWrapper');"><--登录</a>
+			</div>
+			<!--END Buttons-->
+		</form>
+			 
+		<!--end login form-->
+
+	</div>
+</div>
+		
+<!--bg gradient--><div class="gradient"></div><!--END bg gradient-->
+
+</body>
+</html>

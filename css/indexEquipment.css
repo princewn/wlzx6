@@ -1,0 +1,44 @@
+#container{
+	overflow:auto !important;
+	background-color:#FFFFFF;
+	height:auto;/*设个长度要不end等下面的div到处乱跑*/
+	/*overflow:hidden;这里有个margin，会比设定的高度高5*/
+}
+
+#news{
+	background-color:#FFFFFF;
+	
+}
+#slideShow{
+}
+#teacher,#student,#department{
+	width:84%;
+}
+#department{
+	height:200px;
+	color:#666666;
+	text-align:left;
+	margin:0 auto;
+}
+.information{
+	margin:40px auto;
+	margin-bottom:0;
+
+}
+.Information h6{
+	text-align:left;
+}
+.InformationTable{
+	width:100%;
+}
+
+.pageNum{
+	display:inline-block;
+	height:30px;
+	color:#0033FF;
+	vertical-align:baseline;
+	vertical-align:middle\9;
+	margin:20px 6px;
+}
+
+
